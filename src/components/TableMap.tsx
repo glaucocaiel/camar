@@ -393,7 +393,7 @@ export default function TableMap({
           id="pavilion-map-canvas"
           ref={containerRef}
           onPointerMove={handlePointerMove}
-          className="relative w-full aspect-[1.5] border border-white/[0.05] rounded-2xl bg-[#0a0b0d] overflow-hidden cursor-default select-none shadow-sm"
+          className="relative w-full aspect-[1.5] border border-white/[0.08] rounded-[1.4rem] bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.12),transparent_36%),linear-gradient(135deg,#06070a_0%,#0c0f16_100%)] overflow-hidden cursor-default select-none shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
         >
           {/* FUTSAL COURT LINES & ELEMENTS */}
           {/* Center Line */}

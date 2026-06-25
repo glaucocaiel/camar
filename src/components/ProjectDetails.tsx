@@ -58,7 +58,7 @@ export default function ProjectDetails({
   return (
     <div className="bg-transparent overflow-hidden flex flex-col h-full">
       {/* HEADER SECTION */}
-      <div className="bg-gradient-to-br from-[#16171a] to-[#0e0f11] text-white p-6 relative overflow-hidden shrink-0 border-b border-white/[0.05]">
+      <div className="bg-[linear-gradient(135deg,rgba(20,22,29,0.98),rgba(10,12,16,0.98))] text-white p-6 relative overflow-hidden shrink-0 border-b border-white/[0.08]">
         {/* Subtle grid accent */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)",
@@ -74,7 +74,7 @@ export default function ProjectDetails({
               {onClose && (
                 <button
                   onClick={onClose}
-                  className="p-1.5 bg-white/5 hover:bg-white/10 rounded-full transition-colors text-slate-300 hover:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500/40 cursor-pointer border border-white/5"
+                  className="p-1.5 bg-white/[0.05] hover:bg-white/[0.10] rounded-full transition-colors text-slate-300 hover:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500/40 cursor-pointer border border-white/[0.08] shadow-[0_6px_20px_rgba(255,255,255,0.04)]"
                   title="Fechar"
                   type="button"
                 >
@@ -117,7 +117,7 @@ export default function ProjectDetails({
         {/* METRICS / STATS ROW */}
         <div className="grid grid-cols-2 gap-4 border-y border-white/[0.05] py-5">
           {/* Virtual Applause / Claps */}
-          <div className="flex flex-col items-center justify-between p-4 bg-pink-500/[0.02] border border-pink-500/10 hover:border-pink-500/20 rounded-xl relative overflow-hidden text-center group transition-colors duration-250">
+          <div className="flex flex-col items-center justify-between p-4 bg-[linear-gradient(135deg,rgba(244,114,182,0.08),rgba(236,72,153,0.04))] border border-pink-500/15 hover:border-pink-500/25 rounded-[1rem] relative overflow-hidden text-center group transition-colors duration-250 shadow-[0_8px_24px_rgba(244,114,182,0.06)]">
             <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1 block">Curtidas Virtuais</span>
             <div className="flex items-center gap-1.5 my-1">
               <span className="font-display text-3xl font-black text-pink-300 tracking-tight">{interaction.claps}</span>
@@ -127,7 +127,7 @@ export default function ProjectDetails({
             {/* Clap Trigger Button */}
             <button
               onClick={handleClapClick}
-              className="mt-3 w-full bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 text-[11px] font-bold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-pink-500/15 relative overflow-visible cursor-pointer shadow-[0_2px_12px_rgba(244,114,182,0.02)]"
+              className="mt-3 w-full bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 text-[11px] font-bold py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-pink-500/15 relative overflow-visible cursor-pointer shadow-[0_8px_24px_rgba(244,114,182,0.08)]"
             >
               <Heart className="h-3 w-3 fill-pink-300 text-pink-300" /> Curtir Trabalho!
               <AnimatePresence>
@@ -146,7 +146,7 @@ export default function ProjectDetails({
           </div>
 
           {/* Visits / Checked-In */}
-          <div className="flex flex-col items-center justify-between p-4 bg-sky-500/[0.02] border border-sky-500/10 hover:border-sky-500/20 rounded-xl text-center transition-colors duration-250">
+          <div className="flex flex-col items-center justify-between p-4 bg-[linear-gradient(135deg,rgba(56,189,248,0.08),rgba(14,165,233,0.04))] border border-sky-500/15 hover:border-sky-500/25 rounded-[1rem] text-center transition-colors duration-250 shadow-[0_8px_24px_rgba(56,189,248,0.06)]">
             <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1 block">Visitas no Stand</span>
             <div className="flex items-center gap-1.5 my-1">
               <span className="font-display text-3xl font-black text-sky-300 tracking-tight">{interaction.visits}</span>
@@ -155,7 +155,7 @@ export default function ProjectDetails({
             
             <button
               onClick={() => onRegisterVisit(group.id)}
-              className="mt-3 w-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 text-[11px] font-bold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-sky-500/15 cursor-pointer shadow-[0_2px_12px_rgba(56,189,248,0.02)]"
+              className="mt-3 w-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 text-[11px] font-bold py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-sky-500/15 cursor-pointer shadow-[0_8px_24px_rgba(56,189,248,0.08)]"
             >
               📍 Já visitei o stand!
             </button>
@@ -199,7 +199,7 @@ export default function ProjectDetails({
         </div>
 
         {/* WRITE COMMENT FORM */}
-        <div className="bg-white/[0.01] border border-white/[0.04] rounded-xl p-5 shadow-2xs">
+        <div className="bg-[linear-gradient(135deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] border border-white/[0.08] rounded-[1rem] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
           <h4 className="font-display text-[10px] font-bold text-slate-200 mb-3.5 flex items-center gap-1 uppercase tracking-wider">
             ✍️ Enviar Incentivo aos Alunos
           </h4>

@@ -483,7 +483,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c0d0f] text-[#f1f5f9] font-sans antialiased p-4 sm:p-6 md:p-8 relative">
+    <div className="min-h-screen bg-transparent text-[#f1f5f9] font-sans antialiased p-4 sm:p-6 md:p-8 relative">
       {/* GLOBAL TOAST BANNER */}
       <AnimatePresence>
         {successToast && (
@@ -501,7 +501,7 @@ export default function App() {
 
       <div className="max-w-7xl mx-auto space-y-6">
         {/* HEADER NAVBAR (BENTO STYLE) */}
-        <header className="bg-[#16171a]/95 backdrop-blur-xl border border-white/[0.05] rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <header className="bg-[linear-gradient(135deg,rgba(22,23,26,0.97),rgba(10,12,16,0.97))] backdrop-blur-2xl border border-white/[0.08] rounded-[1.5rem] p-5 shadow-[0_20px_60px_rgba(2,6,23,0.45)] ring-1 ring-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <ScientificLogo className="h-14 w-14 shrink-0" />
             <div>
@@ -518,10 +518,10 @@ export default function App() {
             {/* ADMIN MODE TOGGLE */}
             <button
               onClick={() => setIsAdminMode(!isAdminMode)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 cursor-pointer border ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-bold transition-all duration-300 cursor-pointer border ${
                 isAdminMode 
-                  ? "bg-pink-500/[0.08] text-pink-300 border-pink-500/[0.15]" 
-                  : "bg-white/[0.03] text-slate-300 border-white/[0.05] hover:bg-white/[0.06] hover:text-white"
+                  ? "bg-pink-500/[0.10] text-pink-300 border-pink-500/[0.18] shadow-[0_8px_24px_rgba(244,114,182,0.12)]" 
+                  : "bg-white/[0.04] text-slate-300 border-white/[0.08] hover:bg-white/[0.08] hover:text-white shadow-[0_8px_24px_rgba(255,255,255,0.03)]"
               }`}
               title="Alternar Modo Administrador (Arraste estandes no mapa para reposicioná-los)"
             >
@@ -534,7 +534,7 @@ export default function App() {
             {/* SHARE BUTTON */}
             <button
               onClick={handleShare}
-              className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-200 border border-indigo-500/20 font-semibold text-xs sm:text-sm rounded-xl active:scale-98 transition-all duration-350 cursor-pointer"
+              className="flex items-center gap-2 px-5 py-2.5 bg-[linear-gradient(135deg,rgba(99,102,241,0.18),rgba(59,130,246,0.16))] hover:bg-[linear-gradient(135deg,rgba(99,102,241,0.24),rgba(59,130,246,0.22))] text-indigo-200 border border-indigo-400/20 font-semibold text-xs sm:text-sm rounded-2xl active:scale-98 transition-all duration-350 cursor-pointer shadow-[0_10px_30px_rgba(59,130,246,0.14)]"
               title="Copiar link de compartilhamento público"
             >
               <Share2 className="h-4 w-4 text-indigo-300" />
@@ -544,7 +544,7 @@ export default function App() {
         </header>
 
         {/* SEARCH & TURMAS SELECTOR BENTO BOX */}
-        <div className="bg-[#16171a]/90 backdrop-blur-xl border border-white/[0.05] rounded-2xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="bg-[linear-gradient(135deg,rgba(17,19,24,0.96),rgba(12,14,18,0.96))] backdrop-blur-2xl border border-white/[0.08] rounded-[1.5rem] p-6 shadow-[0_20px_60px_rgba(2,6,23,0.34)] ring-1 ring-white/[0.04] flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* SEARCH SYSTEM */}
           <div className="relative w-full lg:max-w-md">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
@@ -642,7 +642,7 @@ export default function App() {
 
         {/* ADMIN WORKSPACE BAR (ONLY VISIBLE IN ADMIN MODE) */}
         {isAdminMode && (
-          <div className="bg-[#16171a] text-white rounded-2xl p-5 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4 border border-white/[0.05] animate-in fade-in duration-300">
+          <div className="bg-[linear-gradient(135deg,rgba(20,22,28,0.98),rgba(10,12,16,0.98))] text-white rounded-[1.4rem] p-5 shadow-[0_20px_60px_rgba(2,6,23,0.32)] flex flex-col md:flex-row items-center justify-between gap-4 border border-white/[0.08] animate-in fade-in duration-300">
             <div>
               <div className="flex items-center gap-2">
                 <span className="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[9px] font-bold rounded uppercase tracking-wider">
@@ -726,7 +726,7 @@ export default function App() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
           {/* MAP CANVAS PANEL (LARGEST BENTO BLOCK) */}
-          <div className="lg:col-span-2 bg-[#16171a]/90 backdrop-blur-xl border border-white/[0.04] rounded-2xl p-6 shadow-2xl flex flex-col justify-between">
+          <div className="lg:col-span-2 bg-[linear-gradient(135deg,rgba(17,19,24,0.96),rgba(12,14,18,0.96))] backdrop-blur-2xl border border-white/[0.08] rounded-[1.5rem] p-6 shadow-[0_24px_70px_rgba(2,6,23,0.34)] ring-1 ring-white/[0.04] flex flex-col justify-between">
             <TableMap
               groups={groups}
               selectedGroupId={selectedGroupId}
@@ -745,7 +745,7 @@ export default function App() {
             <div className="flex flex-col gap-4 h-full justify-between">
               
               {/* BENTO TILE 1: ADMIN CONTROLS / STATS SUMMARY (HIGH CONTRAST DARK CARD) */}
-              <div className="bg-gradient-to-br from-[#16171a] to-[#0e0f11] rounded-2xl p-6 text-white shadow-2xl flex flex-col justify-between relative overflow-hidden border border-white/[0.05]">
+              <div className="bg-[linear-gradient(135deg,rgba(20,22,29,0.98),rgba(9,11,15,0.98))] rounded-[1.35rem] p-6 text-white shadow-[0_18px_55px_rgba(2,6,23,0.32)] flex flex-col justify-between relative overflow-hidden border border-white/[0.08] ring-1 ring-white/[0.04]">
                 <div className="absolute -right-3 -bottom-3 opacity-5 select-none pointer-events-none text-9xl font-black">
                   📊
                 </div>
@@ -786,7 +786,7 @@ export default function App() {
               </div>
 
               {/* BENTO TILE 2: PARENT QUICK LOOK (DEEP EMERALD DESIGN BOX) */}
-              <div className="bg-gradient-to-br from-[#0c1a14] to-[#060e0a] rounded-2xl p-6 text-white shadow-2xl flex flex-col justify-between relative overflow-hidden min-h-[170px] border border-emerald-500/[0.08]">
+              <div className="bg-[linear-gradient(135deg,rgba(5,20,15,0.98),rgba(4,11,8,0.98))] rounded-[1.35rem] p-6 text-white shadow-[0_18px_55px_rgba(3,11,8,0.32)] flex flex-col justify-between relative overflow-hidden min-h-[170px] border border-emerald-500/[0.12] ring-1 ring-emerald-500/[0.06]">
                 <div className="absolute right-3 bottom-1 text-8xl opacity-5 select-none pointer-events-none">🔬</div>
                 <div>
                   <h4 className="font-mono text-[9px] font-bold uppercase tracking-widest text-emerald-400">Comunidade Escolar</h4>
@@ -808,7 +808,7 @@ export default function App() {
               </div>
 
               {/* BENTO TILE 3: LEADERBOARD / DESTAQUES (DARK CARBON SLATE CARD) */}
-              <div className="bg-[#16171a]/90 border border-white/[0.04] rounded-2xl p-6 shadow-2xl flex flex-col justify-between min-h-[220px]">
+              <div className="bg-[linear-gradient(135deg,rgba(18,20,26,0.96),rgba(10,12,16,0.96))] border border-white/[0.08] rounded-[1.35rem] p-6 shadow-[0_18px_55px_rgba(2,6,23,0.3)] flex flex-col justify-between min-h-[220px] ring-1 ring-white/[0.04]">
                 <div>
                   <h3 className="font-display text-xs font-bold text-slate-300 tracking-wider mb-4 flex items-center gap-2 uppercase">
                     <Award className="h-4 w-4 text-indigo-400" />
@@ -864,7 +864,7 @@ export default function App() {
       {/* MODAL FOR SELECTED PROJECT DETAILS */}
       <AnimatePresence>
         {selectedGroup && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-300">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-xl animate-in fade-in duration-300">
             {/* Backdrop click to close */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -880,7 +880,7 @@ export default function App() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98, y: 15 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="relative z-10 w-full max-w-2xl bg-[#16171a] rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[90vh] border border-white/[0.05]"
+              className="relative z-10 w-full max-w-2xl bg-[linear-gradient(135deg,rgba(20,22,29,0.98),rgba(9,11,15,0.98))] rounded-[1.4rem] shadow-[0_24px_80px_rgba(2,6,23,0.42)] overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[90vh] border border-white/[0.08] ring-1 ring-white/[0.04]"
             >
               <ProjectDetails
                 group={selectedGroup}
