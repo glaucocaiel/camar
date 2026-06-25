@@ -58,23 +58,23 @@ export default function ProjectDetails({
   return (
     <div className="bg-transparent overflow-hidden flex flex-col h-full">
       {/* HEADER SECTION */}
-      <div className="bg-[linear-gradient(135deg,rgba(20,22,29,0.98),rgba(10,12,16,0.98))] text-white p-6 relative overflow-hidden shrink-0 border-b border-white/[0.08]">
+      <div className="bg-slate-900/95 text-white p-5 sm:p-6 relative overflow-hidden backdrop-blur-md shrink-0 border-b border-white/10">
         {/* Subtle grid accent */}
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)",
           backgroundSize: "16px 16px"
         }} />
         
-        <div className="relative z-10 flex flex-col gap-3">
+        <div className="relative z-10 flex flex-col gap-2.5">
           <div className="flex items-center justify-between gap-4">
-            <span className="font-mono text-[9px] font-bold uppercase bg-indigo-500/10 px-2.5 py-1 rounded-full border border-indigo-500/20 tracking-wider text-indigo-300">
+            <span className="text-[10px] font-bold uppercase bg-indigo-600/80 px-2.5 py-1 rounded-full border border-indigo-400/20 tracking-wider">
               Stand {group.groupNumber} • {group.classCode}
             </span>
             <div className="flex items-center gap-2">
               {onClose && (
                 <button
                   onClick={onClose}
-                  className="p-1.5 bg-white/[0.05] hover:bg-white/[0.10] rounded-full transition-colors text-slate-300 hover:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500/40 cursor-pointer border border-white/[0.08] shadow-[0_6px_20px_rgba(255,255,255,0.04)]"
+                  className="p-1.5 bg-white/10 hover:bg-white/20 rounded-full transition-colors text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                   title="Fechar"
                   type="button"
                 >
@@ -84,29 +84,29 @@ export default function ProjectDetails({
             </div>
           </div>
           
-          <h2 className="font-display text-base sm:text-lg md:text-xl font-extrabold leading-snug tracking-tight text-white">
+          <h2 className="font-sans text-base sm:text-lg md:text-xl font-bold leading-tight tracking-tight text-slate-50">
             {group.title}
           </h2>
           
-          <div className="flex items-start sm:items-center gap-2 text-xs text-slate-400 border-t border-white/[0.04] pt-3">
+          <div className="flex items-start sm:items-center gap-2 text-xs text-slate-300 border-t border-white/10 pt-2">
             <UserCheck className="h-3.5 w-3.5 text-indigo-400 shrink-0 mt-0.5 sm:mt-0" />
-            <span className="leading-relaxed">Orientador(a): <strong className="text-slate-100 font-semibold">{group.advisor || "Sandro Dias Martins"}</strong></span>
+            <span className="leading-relaxed">Orientador(a): <strong className="text-white font-semibold">{group.advisor || "Sandro Dias Martins"}</strong></span>
           </div>
         </div>
       </div>
 
       {/* CORE INFO & COMMENTS */}
-      <div className="flex-1 p-5 sm:p-6 space-y-5 sm:space-y-6 overflow-y-auto bg-transparent">
+      <div className="flex-1 p-4 sm:p-6 space-y-4 sm:space-y-6 overflow-y-auto">
         {/* PARTICIPANTS SECTION */}
         <div>
-          <h3 className="font-display text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-            <Users className="h-3.5 w-3.5 text-indigo-400" /> Integrantes do Grupo
+          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5">
+            <Users className="h-4 w-4 text-slate-400" /> Integrantes do Grupo
           </h3>
           <div className="flex flex-wrap gap-2">
             {group.participants.map((student, idx) => (
               <span
                 key={idx}
-                className="text-xs bg-white/[0.02] text-slate-200 px-3.5 py-2 rounded-xl border border-white/[0.04] hover:bg-white/[0.04] hover:border-white/[0.08] transition-all font-semibold shadow-2xs tracking-tight"
+                className="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 transition-colors font-medium"
               >
                 {student}
               </span>
@@ -115,21 +115,21 @@ export default function ProjectDetails({
         </div>
 
         {/* METRICS / STATS ROW */}
-        <div className="grid grid-cols-2 gap-4 border-y border-white/[0.05] py-5">
+        <div className="grid grid-cols-2 gap-4 border-y border-slate-100 py-5">
           {/* Virtual Applause / Claps */}
-          <div className="flex flex-col items-center justify-between p-4 bg-[linear-gradient(135deg,rgba(244,114,182,0.08),rgba(236,72,153,0.04))] border border-pink-500/15 hover:border-pink-500/25 rounded-[1rem] relative overflow-hidden text-center group transition-colors duration-250 shadow-[0_8px_24px_rgba(244,114,182,0.06)]">
-            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1 block">Curtidas Virtuais</span>
-            <div className="flex items-center gap-1.5 my-1">
-              <span className="font-display text-3xl font-black text-pink-300 tracking-tight">{interaction.claps}</span>
-              <Heart className="h-5 w-5 text-pink-455 fill-pink-400/80 animate-pulse" />
+          <div className="flex flex-col items-center justify-center p-3 bg-indigo-50/50 border border-indigo-100 rounded-xl relative overflow-hidden text-center group">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Curtidas Virtuais</span>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl font-black text-indigo-900 tracking-tight">{interaction.claps}</span>
+              <Heart className="h-5 w-5 text-indigo-500 fill-indigo-500 animate-pulse" />
             </div>
             
             {/* Clap Trigger Button */}
             <button
               onClick={handleClapClick}
-              className="mt-3 w-full bg-pink-500/10 hover:bg-pink-500/20 text-pink-300 text-[11px] font-bold py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-pink-500/15 relative overflow-visible cursor-pointer shadow-[0_8px_24px_rgba(244,114,182,0.08)]"
+              className="mt-2.5 w-full bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] font-bold py-1.5 px-3 rounded-lg flex items-center justify-center gap-1 transition-all active:scale-95 shadow-sm relative"
             >
-              <Heart className="h-3 w-3 fill-pink-300 text-pink-300" /> Curtir Trabalho!
+              <Heart className="h-3 w-3 fill-white" /> Curtir Trabalho!
               <AnimatePresence>
                 {showClapEffect && (
                   <motion.span
@@ -138,7 +138,7 @@ export default function ProjectDetails({
                     exit={{ opacity: 0 }}
                     className="absolute text-lg pointer-events-none"
                   >
-                    🌸
+                    ❤️
                   </motion.span>
                 )}
               </AnimatePresence>
@@ -146,52 +146,52 @@ export default function ProjectDetails({
           </div>
 
           {/* Visits / Checked-In */}
-          <div className="flex flex-col items-center justify-between p-4 bg-[linear-gradient(135deg,rgba(56,189,248,0.08),rgba(14,165,233,0.04))] border border-sky-500/15 hover:border-sky-500/25 rounded-[1rem] text-center transition-colors duration-250 shadow-[0_8px_24px_rgba(56,189,248,0.06)]">
-            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1 block">Visitas no Stand</span>
-            <div className="flex items-center gap-1.5 my-1">
-              <span className="font-display text-3xl font-black text-sky-300 tracking-tight">{interaction.visits}</span>
-              <Sparkles className="h-5 w-5 text-sky-400" />
+          <div className="flex flex-col items-center justify-center p-3 bg-emerald-50/50 border border-emerald-100 rounded-xl text-center">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Visitas no Stand</span>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl font-black text-emerald-900 tracking-tight">{interaction.visits}</span>
+              <Sparkles className="h-5 w-5 text-emerald-500" />
             </div>
             
             <button
               onClick={() => onRegisterVisit(group.id)}
-              className="mt-3 w-full bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 text-[11px] font-bold py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-sky-500/15 cursor-pointer shadow-[0_8px_24px_rgba(56,189,248,0.08)]"
+              className="mt-2.5 w-full bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold py-1.5 px-3 rounded-lg flex items-center justify-center gap-1 transition-all active:scale-95 shadow-sm"
             >
-              📍 Já visitei o stand!
+              📍 Já visitei este stand!
             </button>
           </div>
         </div>
 
         {/* FEED / PARENT MESSAGES */}
         <div>
-          <h3 className="font-display text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-1.5">
-            <MessageSquare className="h-4 w-4 text-indigo-400" /> Mural de Apoio ({groupComments.length})
+          <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-1.5">
+            <MessageSquare className="h-4 w-4 text-slate-400" /> Mural de Apoio ({groupComments.length})
           </h3>
           
           {groupComments.length === 0 ? (
-            <div className="text-center py-8 bg-white/[0.01] border border-dashed border-white/[0.04] rounded-xl text-slate-500 text-xs">
+            <div className="text-center py-6 bg-slate-50 border border-dashed border-slate-200 rounded-xl text-slate-400 text-xs">
               <p className="font-semibold mb-0.5">Mural vazio por enquanto.</p>
-              <p>Deixe uma linda mensagem de incentivo para este grupo!</p>
+              <p>Seja o primeiro a deixar uma mensagem de incentivo para este grupo!</p>
             </div>
           ) : (
-            <div className="space-y-3.5 max-h-60 overflow-y-auto pr-1">
+            <div className="space-y-3 max-h-60 overflow-y-auto pr-1">
               {groupComments.map((comment) => (
                 <div
                   key={comment.id}
-                  className="bg-[#0e0f11] border border-white/[0.04] rounded-xl p-4 flex flex-col gap-1.5 text-xs hover:bg-[#15161a] hover:border-white/[0.06] transition-all duration-150"
+                  className="bg-slate-50 border border-slate-100 rounded-xl p-3 flex flex-col gap-1 text-xs"
                 >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-bold text-white flex items-center gap-1.5">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold text-slate-800">
                       {comment.authorName}
-                      <span className="px-2 py-0.5 rounded-md text-[9px] bg-[#0a0b0d]/80 text-slate-400 border border-white/[0.04] font-mono font-bold uppercase tracking-wider">
+                      <span className="ml-1.5 px-1.5 py-0.5 rounded-full text-[9px] bg-slate-200 text-slate-600 font-bold uppercase">
                         {comment.relationship}
                       </span>
                     </span>
-                    <span className="text-[9px] text-slate-500 flex items-center gap-0.5 font-mono">
-                      <Clock className="h-2.5 w-2.5 text-slate-600" /> {comment.timestamp}
+                    <span className="text-[9px] text-slate-400 flex items-center gap-0.5 font-medium">
+                      <Clock className="h-2.5 w-2.5" /> {comment.timestamp}
                     </span>
                   </div>
-                  <p className="text-slate-300 leading-relaxed font-medium">{comment.content}</p>
+                  <p className="text-slate-600 leading-normal">{comment.content}</p>
                 </div>
               ))}
             </div>
@@ -199,33 +199,33 @@ export default function ProjectDetails({
         </div>
 
         {/* WRITE COMMENT FORM */}
-        <div className="bg-[linear-gradient(135deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] border border-white/[0.08] rounded-[1rem] p-5 shadow-[0_8px_24px_rgba(0,0,0,0.18)]">
-          <h4 className="font-display text-[10px] font-bold text-slate-200 mb-3.5 flex items-center gap-1 uppercase tracking-wider">
+        <div className="bg-slate-50/50 border border-slate-100 rounded-xl p-4">
+          <h4 className="text-xs font-bold text-slate-700 mb-3 flex items-center gap-1">
             ✍️ Enviar Incentivo aos Alunos
           </h4>
           
-          <form onSubmit={handleSubmitComment} className="space-y-4">
-            <div className="grid grid-cols-2 gap-3">
+          <form onSubmit={handleSubmitComment} className="space-y-3">
+            <div className="grid grid-cols-2 gap-2">
               {/* Author name */}
               <div>
-                <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">Seu Nome</label>
+                <label className="text-[9px] font-bold text-slate-500 uppercase block mb-1">Seu Nome</label>
                 <input
                   type="text"
                   required
                   placeholder="Ex: Maria Souza"
                   value={authorName}
                   onChange={(e) => setAuthorName(e.target.value)}
-                  className="w-full text-xs px-3 py-2.5 bg-[#0e0f11] border border-white/[0.04] rounded-lg focus:outline-none focus:border-indigo-500/40 transition-all font-medium text-slate-100 placeholder-slate-600"
+                  className="w-full text-xs p-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
                 />
               </div>
 
               {/* Relationship dropdown */}
               <div>
-                <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">Quem é você?</label>
+                <label className="text-[9px] font-bold text-slate-500 uppercase block mb-1">Quem é você?</label>
                 <select
                   value={relationship}
                   onChange={(e) => setRelationship(e.target.value as ParentComment["relationship"])}
-                  className="w-full text-xs px-3 py-2.5 bg-[#0e0f11] border border-white/[0.04] rounded-lg focus:outline-none focus:border-indigo-500/40 transition-all font-semibold text-slate-300 cursor-pointer"
+                  className="w-full text-xs p-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
                 >
                   <option value="Pai/Mãe">Pai / Mãe</option>
                   <option value="Familiar">Familiar</option>
@@ -238,14 +238,14 @@ export default function ProjectDetails({
 
             {/* Quick Presets for Encouragement */}
             <div>
-              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Sugestões Rápidas:</span>
+              <span className="text-[9px] font-bold text-slate-400 uppercase block mb-1">Sugestões Rápidas:</span>
               <div className="flex flex-wrap gap-1.5">
                 {PRESET_MESSAGES.map((preset, idx) => (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => handleSelectPreset(preset)}
-                    className="text-[9px] font-bold bg-[#0e0f11] hover:bg-white/[0.02] text-slate-300 border border-white/[0.04] px-2.5 py-1.5 rounded-lg transition-all active:scale-95 cursor-pointer hover:border-white/[0.08]"
+                    className="text-[9px] font-semibold bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 px-2 py-1 rounded-md transition-all active:scale-95"
                   >
                     {preset.substring(0, 15)}...
                   </button>
@@ -255,22 +255,22 @@ export default function ProjectDetails({
 
             {/* Comment textarea */}
             <div>
-              <label className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">Mensagem</label>
+              <label className="text-[9px] font-bold text-slate-500 uppercase block mb-1">Mensagem</label>
               <textarea
                 required
                 rows={2}
                 placeholder="Escreva algo especial para apoiar os alunos neste projeto científico..."
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
-                className="w-full text-xs px-3 py-2.5 bg-[#0e0f11] border border-white/[0.04] rounded-lg focus:outline-none focus:border-indigo-500/40 transition-all leading-relaxed font-medium text-slate-100 placeholder-slate-600"
+                className="w-full text-xs p-2 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 leading-normal"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-300 hover:text-indigo-200 text-xs font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-300 active:scale-98 border border-indigo-500/20 cursor-pointer"
+              className="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-1.5 transition-all active:scale-95 shadow-sm"
             >
-              <Send className="h-3.5 w-3.5 text-indigo-400" /> Enviar Mensagem de Apoio
+              <Send className="h-3.5 w-3.5" /> Enviar Mensagem de Apoio
             </button>
           </form>
         </div>

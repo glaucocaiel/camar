@@ -36,7 +36,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 2.0,
     width: 6.5,
     height: 9,
-    color: "bg-indigo-950/70 text-indigo-300 border-indigo-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-indigo-100 text-indigo-850 border-indigo-300 font-extrabold shadow-sm",
   },
   {
     id: "l7-q1",
@@ -46,7 +46,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 42.5,
     width: 6.5,
     height: 9,
-    color: "bg-violet-950/70 text-violet-300 border-violet-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-violet-100 text-violet-850 border-violet-300 font-extrabold shadow-sm",
   },
   {
     id: "l8-q1",
@@ -56,7 +56,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 2.0,
     width: 6.5,
     height: 9,
-    color: "bg-teal-950/70 text-teal-300 border-teal-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-teal-100 text-teal-850 border-teal-300 font-extrabold shadow-sm",
   },
   {
     id: "l2-q1",
@@ -66,7 +66,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 2.0,
     width: 6.5,
     height: 9,
-    color: "bg-blue-950/70 text-blue-300 border-blue-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-blue-100 text-blue-850 border-blue-300 font-extrabold shadow-sm",
   },
   {
     id: "l3-q1",
@@ -76,7 +76,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 0.5,
     width: 10,
     height: 9,
-    color: "bg-indigo-900/80 text-indigo-300 border-indigo-750 font-bold shadow-3xs",
+    color: "bg-emerald-50 text-emerald-800 border-emerald-300",
   },
   {
     id: "l4-q1",
@@ -86,7 +86,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 83.2,
     width: 6.5,
     height: 9,
-    color: "bg-amber-950/70 text-amber-300 border-amber-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-amber-100 text-amber-850 border-amber-300 font-extrabold shadow-sm",
   },
   {
     id: "l9-q1",
@@ -96,7 +96,7 @@ const QUADRA_1_LANDMARKS: Landmark[] = [
     y: 89.5,
     width: 11.0,
     height: 9,
-    color: "bg-slate-900 text-slate-400 border-slate-800 font-bold shadow-3xs",
+    color: "bg-emerald-50 text-emerald-800 border-emerald-300",
   },
 ];
 
@@ -109,7 +109,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 9,
     width: 6.5,
     height: 9,
-    color: "bg-indigo-950/70 text-indigo-300 border-indigo-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-indigo-100 text-indigo-850 border-indigo-300 font-extrabold shadow-sm",
   },
   {
     id: "l7-q2",
@@ -119,7 +119,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 29.7,
     width: 6.5,
     height: 9,
-    color: "bg-violet-950/70 text-violet-300 border-violet-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-violet-100 text-violet-850 border-violet-300 font-extrabold shadow-sm",
   },
   {
     id: "l8-q2",
@@ -129,7 +129,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 62.0,
     width: 6.5,
     height: 9,
-    color: "bg-emerald-950/70 text-emerald-300 border-emerald-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-emerald-100 text-emerald-850 border-emerald-300 font-extrabold shadow-sm",
   },
   {
     id: "l2",
@@ -139,7 +139,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 9,
     width: 6.5,
     height: 9,
-    color: "bg-emerald-950/70 text-emerald-300 border-emerald-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-emerald-100 text-emerald-850 border-emerald-300 font-extrabold shadow-sm",
   },
   {
     id: "l3",
@@ -149,7 +149,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 83,
     width: 10,
     height: 9,
-    color: "bg-indigo-900/80 text-indigo-300 border-indigo-750 font-bold shadow-3xs",
+    color: "bg-emerald-50 text-emerald-800 border-emerald-300",
   },
   {
     id: "l4",
@@ -159,7 +159,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 62.7,
     width: 6.5,
     height: 9,
-    color: "bg-sky-950/70 text-sky-300 border-sky-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-sky-100 text-sky-850 border-sky-300 font-extrabold shadow-sm",
   },
   {
     id: "l5",
@@ -169,7 +169,7 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 35,
     width: 4.5,
     height: 18,
-    color: "bg-slate-900 text-slate-400 border-slate-800 font-bold shadow-3xs",
+    color: "bg-emerald-50 text-emerald-800 border-emerald-300",
   },
   {
     id: "l6",
@@ -179,17 +179,17 @@ const QUADRA_2_LANDMARKS: Landmark[] = [
     y: 61,
     width: 6.5,
     height: 9,
-    color: "bg-blue-950/70 text-blue-300 border-blue-800/80 font-bold shadow-2xs text-[7px]",
+    color: "bg-blue-100 text-blue-800 border-blue-300",
   },
   {
     id: "l7",
-    name: "ENTRADA Q2",
+    name: "ENTRADA QUADRA 2",
     type: "rect",
     x: 94,
     y: 76,
     width: 4.5,
     height: 18,
-    color: "bg-slate-900 text-slate-400 border-slate-800 font-bold shadow-3xs",
+    color: "bg-emerald-50 text-emerald-800 border-emerald-300",
   },
 ];
 
@@ -228,48 +228,48 @@ export default function TableMap({
       case "blue":
       case "sky":
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-sky-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-sky-500/10 border-sky-500 border-2 text-sky-200 font-black ring-2 ring-sky-500/10 scale-105 z-30",
-          textColor: "text-sky-400"
+          bg: "bg-blue-100/90 hover:bg-blue-200 border-blue-300 text-blue-900 font-extrabold shadow-sm",
+          selectedBg: "bg-blue-200 border-blue-400 text-blue-950 font-black ring-2 ring-blue-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-blue-900"
         };
       case "teal":
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-teal-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-teal-500/10 border-teal-500 border-2 text-teal-200 font-black ring-2 ring-teal-500/10 scale-105 z-30",
-          textColor: "text-teal-400"
+          bg: "bg-teal-100/90 hover:bg-teal-200 border-teal-300 text-teal-900 font-extrabold shadow-sm",
+          selectedBg: "bg-teal-200 border-teal-400 text-teal-950 font-black ring-2 ring-teal-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-teal-900"
         };
       case "indigo":
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-indigo-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-indigo-500/10 border-indigo-500 border-2 text-indigo-200 font-black ring-2 ring-indigo-500/10 scale-105 z-30",
-          textColor: "text-indigo-400"
+          bg: "bg-indigo-100/90 hover:bg-indigo-200 border-indigo-300 text-indigo-900 font-extrabold shadow-sm",
+          selectedBg: "bg-indigo-200 border-indigo-400 text-indigo-950 font-black ring-2 ring-indigo-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-indigo-900"
         };
       case "violet":
       case "purple":
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-violet-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-violet-500/10 border-violet-500 border-2 text-violet-200 font-black ring-2 ring-violet-500/10 scale-105 z-30",
-          textColor: "text-violet-400"
+          bg: "bg-violet-100/90 hover:bg-violet-200 border-violet-300 text-violet-900 font-extrabold shadow-sm",
+          selectedBg: "bg-violet-200 border-violet-400 text-violet-950 font-black ring-2 ring-violet-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-violet-900"
         };
       case "emerald":
       case "green":
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-emerald-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-emerald-500/10 border-emerald-500 border-2 text-emerald-200 font-black ring-2 ring-emerald-500/10 scale-105 z-30",
-          textColor: "text-emerald-400"
+          bg: "bg-emerald-100/90 hover:bg-emerald-200 border-emerald-300 text-emerald-900 font-extrabold shadow-sm",
+          selectedBg: "bg-emerald-200 border-emerald-400 text-emerald-950 font-black ring-2 ring-emerald-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-emerald-900"
         };
       case "amber":
       case "yellow":
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-amber-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-amber-500/10 border-amber-500 border-2 text-amber-200 font-black ring-2 ring-amber-500/10 scale-105 z-30",
-          textColor: "text-amber-400"
+          bg: "bg-amber-100/90 hover:bg-amber-200 border-amber-300 text-amber-900 font-extrabold shadow-sm",
+          selectedBg: "bg-amber-200 border-amber-400 text-amber-950 font-black ring-2 ring-amber-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-amber-900"
         };
       default:
         return {
-          bg: "bg-[#1a1b1e]/95 border border-white/[0.04] border-l-[3.5px] border-l-slate-500 text-slate-100 shadow-sm hover:bg-[#25272d] hover:border-white/[0.08] hover:scale-105 active:scale-95 transition-all duration-200 font-bold",
-          selectedBg: "bg-slate-500/10 border-slate-500 border-2 text-slate-200 font-black ring-2 ring-slate-500/10 scale-105 z-30",
-          textColor: "text-slate-400"
+          bg: "bg-slate-100/90 hover:bg-slate-200 border-slate-300 text-slate-900 font-extrabold shadow-sm",
+          selectedBg: "bg-slate-200 border-slate-400 text-slate-950 font-black ring-2 ring-slate-300 ring-offset-2 scale-110 z-30 shadow-md",
+          textColor: "text-slate-900"
         };
     }
   };
@@ -348,13 +348,13 @@ export default function TableMap({
       <div className="flex-1">
         
         {/* QUADRA TAB SELECTOR */}
-        <div className="flex justify-center gap-2 mb-4 border-b border-white/[0.05]">
+        <div className="flex justify-center gap-2 mb-4 border-b border-slate-200">
           <button
             onClick={() => onSelectQuadra("Quadra 1")}
-            className={`flex items-center gap-2 px-5 py-3 rounded-t-xl text-xs font-bold transition-all border-b-2 -mb-[2px] ${
+            className={`flex items-center gap-2 px-5 py-3 rounded-t-2xl text-xs font-extrabold transition-all border-t-2 border-x -mb-[1px] ${
               selectedQuadra === "Quadra 1"
-                ? "border-b-indigo-500 text-indigo-300 bg-white/[0.02]"
-                : "border-b-transparent text-slate-500 hover:text-slate-300 hover:bg-white/[0.01]"
+                ? "bg-white border-t-indigo-600 border-x-slate-200 text-indigo-950 shadow-2xs"
+                : "bg-slate-50 border-transparent text-slate-400 hover:text-slate-700 hover:bg-slate-100"
             }`}
           >
             <LayoutGrid className="h-3.5 w-3.5" />
@@ -362,10 +362,10 @@ export default function TableMap({
           </button>
           <button
             onClick={() => onSelectQuadra("Quadra 2")}
-            className={`flex items-center gap-2 px-5 py-3 rounded-t-xl text-xs font-bold transition-all border-b-2 -mb-[2px] ${
+            className={`flex items-center gap-2 px-5 py-3 rounded-t-2xl text-xs font-extrabold transition-all border-t-2 border-x -mb-[1px] ${
               selectedQuadra === "Quadra 2"
-                ? "border-b-indigo-500 text-indigo-300 bg-white/[0.02]"
-                : "border-b-transparent text-slate-500 hover:text-slate-300 hover:bg-white/[0.01]"
+                ? "bg-white border-t-indigo-600 border-x-slate-200 text-indigo-950 shadow-2xs"
+                : "bg-slate-50 border-transparent text-slate-400 hover:text-slate-700 hover:bg-slate-100"
             }`}
           >
             <LayoutGrid className="h-3.5 w-3.5" />
@@ -379,12 +379,12 @@ export default function TableMap({
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
-            <h3 className="font-semibold text-slate-200 text-sm tracking-tight">
+            <h3 className="font-semibold text-slate-800 text-sm tracking-tight">
               {isAdminMode ? "📍 Painel de Ajuste - Arraste os Stands" : "📍 Mapa Quadra - Clique em um Stand"}
             </h3>
           </div>
-          <div className="text-xs text-slate-400 font-medium">
-            Filtro Ativo: <span className="text-indigo-400 font-bold">{currentClass === "TODAS" ? "Todas as Turmas" : currentClass}</span>
+          <div className="text-xs text-slate-500 font-medium">
+            Filtro Ativo: <span className="text-indigo-600 font-bold">{currentClass === "TODAS" ? "Todas as Turmas" : currentClass}</span>
           </div>
         </div>
 
@@ -393,28 +393,28 @@ export default function TableMap({
           id="pavilion-map-canvas"
           ref={containerRef}
           onPointerMove={handlePointerMove}
-          className="relative w-full aspect-[1.5] border border-white/[0.08] rounded-[1.4rem] bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.12),transparent_36%),linear-gradient(135deg,#06070a_0%,#0c0f16_100%)] overflow-hidden cursor-default select-none shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+          className="relative w-full aspect-[1.5] border border-slate-200 rounded-3xl bg-white overflow-hidden shadow-sm cursor-default select-none"
         >
           {/* FUTSAL COURT LINES & ELEMENTS */}
           {/* Center Line */}
-          <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-white/[0.03] -translate-x-1/2 select-none pointer-events-none" />
+          <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-slate-150 -translate-x-1/2 select-none pointer-events-none" />
           
           {/* Center Circle */}
-          <div className="absolute top-1/2 left-1/2 w-[22%] aspect-square border-2 border-white/[0.03] rounded-full -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 w-[1.5%] aspect-square bg-white/[0.03] rounded-full -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 w-[22%] aspect-square border-2 border-slate-150 rounded-full -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 w-[1.5%] aspect-square bg-slate-150 rounded-full -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none" />
 
           {/* Left Penalty Area */}
-          <div className="absolute top-1/2 left-0 w-[12%] h-[60%] border-2 border-white/[0.03] border-l-0 rounded-r-full -translate-y-1/2 select-none pointer-events-none opacity-85" />
-          <div className="absolute top-1/2 left-[8%] w-1 aspect-square bg-white/[0.03] rounded-full -translate-y-1/2 select-none pointer-events-none" />
+          <div className="absolute top-1/2 left-0 w-[12%] h-[60%] border-2 border-slate-150 border-l-0 rounded-r-full -translate-y-1/2 select-none pointer-events-none opacity-85" />
+          <div className="absolute top-1/2 left-[8%] w-1 aspect-square bg-slate-150 rounded-full -translate-y-1/2 select-none pointer-events-none" />
 
           {/* Right Penalty Area */}
-          <div className="absolute top-1/2 right-0 w-[12%] h-[60%] border-2 border-white/[0.03] border-r-0 rounded-l-full -translate-y-1/2 select-none pointer-events-none opacity-85" />
-          <div className="absolute top-1/2 right-[8%] w-1 aspect-square bg-white/[0.03] rounded-full -translate-y-1/2 select-none pointer-events-none" />
+          <div className="absolute top-1/2 right-0 w-[12%] h-[60%] border-2 border-slate-150 border-r-0 rounded-l-full -translate-y-1/2 select-none pointer-events-none opacity-85" />
+          <div className="absolute top-1/2 right-[8%] w-1 aspect-square bg-slate-150 rounded-full -translate-y-1/2 select-none pointer-events-none" />
 
           {/* WATERMARK LABEL */}
           <div 
             style={{ transform: "translate(-50%, -50%) rotate(-15deg)" }}
-            className="absolute top-1/2 left-1/2 font-sans font-black text-5xl md:text-7xl text-white/[0.015] select-none pointer-events-none uppercase tracking-widest z-0"
+            className="absolute top-1/2 left-1/2 font-sans font-black text-5xl md:text-7xl text-slate-100 select-none pointer-events-none uppercase tracking-widest z-0 opacity-60"
           >
             {selectedQuadra}
           </div>
@@ -518,16 +518,16 @@ export default function TableMap({
         </div>
 
         {/* Helpful hint bar */}
-        <div className="mt-3 p-3 bg-[#16171a]/50 border border-white/[0.04] rounded-2xl text-xs text-slate-400 flex items-start gap-2 shadow-2xs">
-          <AlertCircle className="h-4 w-4 text-indigo-400 mt-0.5 flex-shrink-0" />
+        <div className="mt-3 p-3 bg-slate-50 border border-slate-150 rounded-2xl text-xs text-slate-600 flex items-start gap-2 shadow-2xs">
+          <AlertCircle className="h-4 w-4 text-indigo-500 mt-0.5 flex-shrink-0" />
           <div className="leading-relaxed">
             {isAdminMode ? (
               <span>
-                <strong className="text-slate-350">Modo Editor:</strong> Clique e arraste os stands diretamente no mapa da quadra selecionada. Use o painel à direita para ajustar com precisão a rotação, tamanho, cores e dados do grupo selecionado.
+                <strong>Modo Editor:</strong> Clique e arraste os stands diretamente no mapa da quadra selecionada. Use o painel à direita para ajustar com precisão a rotação, tamanho, cores e dados do grupo selecionado.
               </span>
             ) : (
               <span>
-                <strong className="text-slate-350">Dica de Interação:</strong> Clique nos stands coloridos no mapa para ver os alunos, orientadores e avaliadores. Deixe um <strong className="text-slate-300">comentário de incentivo</strong> e envie <strong className="text-slate-300">curtidas virtuais</strong> para apoiar o trabalho!
+                <strong>Dica de Interação:</strong> Clique nos stands coloridos no mapa para ver os alunos, orientadores e avaliadores. Deixe um <strong>comentário de incentivo</strong> e envie <strong>curtidas virtuais</strong> para apoiar o trabalho!
               </span>
             )}
           </div>
@@ -536,54 +536,54 @@ export default function TableMap({
 
       {/* ADMIN CONTROLS FOR SELECTED GROUP */}
       {isAdminMode && (
-        <div className="w-full lg:w-80 flex-shrink-0 bg-[#16171a] border border-white/[0.05] rounded-3xl p-5 shadow-md text-slate-200">
-          <div className="flex items-center gap-2 pb-3 mb-4 border-b border-white/[0.05]">
-            <Settings className="h-4 w-4 text-slate-450" />
-            <h4 className="font-bold text-slate-200 text-sm">Propriedades do Stand</h4>
+        <div className="w-full lg:w-80 flex-shrink-0 bg-white border border-slate-200 rounded-3xl p-5 shadow-sm">
+          <div className="flex items-center gap-2 pb-3 mb-4 border-b border-slate-100">
+            <Settings className="h-4 w-4 text-slate-600" />
+            <h4 className="font-bold text-slate-800 text-sm">Propriedades do Stand</h4>
           </div>
 
           {selectedGroup ? (
             <div className="space-y-4">
               <div>
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Grupo Selecionado</span>
-                <p className="text-xs font-bold text-white bg-[#0e0f11] px-2 py-1.5 rounded border border-white/[0.04]">
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Grupo Selecionado</span>
+                <p className="text-xs font-bold text-slate-800 bg-slate-50 px-2 py-1.5 rounded border border-slate-100">
                   Stand {selectedGroup.groupNumber} - {selectedGroup.classCode}
                 </p>
               </div>
 
               {/* Title Input */}
               <div>
-                <label className="text-[10px] font-bold text-slate-450 uppercase tracking-wider block mb-1">Título do Projeto</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Título do Projeto</label>
                 <textarea
                   value={selectedGroup.title}
                   onChange={(e) => onUpdateGroupDetails(selectedGroup.id, { title: e.target.value })}
                   rows={2}
-                  className="w-full text-xs p-2 bg-[#0e0f11] border border-white/[0.04] text-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 leading-normal"
+                  className="w-full text-xs p-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 leading-normal"
                 />
               </div>
 
               {/* Coordinators / Advisors */}
               <div>
-                <label className="text-[10px] font-bold text-slate-450 uppercase tracking-wider block mb-1">Orientador(a)</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Orientador(a)</label>
                 <input
                   type="text"
                   value={selectedGroup.advisor}
                   onChange={(e) => onUpdateGroupDetails(selectedGroup.id, { advisor: e.target.value })}
-                  className="w-full text-xs p-2 bg-[#0e0f11] border border-white/[0.04] text-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full text-xs p-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                 />
               </div>
 
               {/* Grid Fine Positioning Controls */}
-              <div className="space-y-3 p-3 bg-[#0e0f11]/60 rounded-xl border border-white/[0.04]">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
-                  <Sliders className="h-3 w-3 text-indigo-400" /> Posição e Rotação
+              <div className="space-y-3 p-3 bg-slate-50 rounded-xl border border-slate-150">
+                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1">
+                  <Sliders className="h-3 w-3" /> Posição e Rotação
                 </span>
                 
                 {/* Pos X */}
                 <div>
                   <div className="flex justify-between text-[10px] text-slate-500 font-medium mb-1">
                     <span>Posição X (Horizontal)</span>
-                    <span className="font-bold text-slate-300">{selectedGroup.x}%</span>
+                    <span className="font-bold">{selectedGroup.x}%</span>
                   </div>
                   <input
                     type="range"
@@ -592,7 +592,7 @@ export default function TableMap({
                     step="0.5"
                     value={selectedGroup.x}
                     onChange={(e) => onUpdateGroupPosition(selectedGroup.id, parseFloat(e.target.value), selectedGroup.y)}
-                    className="w-full h-1 bg-white/[0.06] rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                    className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                   />
                 </div>
 
@@ -600,7 +600,7 @@ export default function TableMap({
                 <div>
                   <div className="flex justify-between text-[10px] text-slate-500 font-medium mb-1">
                     <span>Posição Y (Vertical)</span>
-                    <span className="font-bold text-slate-300">{selectedGroup.y}%</span>
+                    <span className="font-bold">{selectedGroup.y}%</span>
                   </div>
                   <input
                     type="range"
@@ -609,7 +609,7 @@ export default function TableMap({
                     step="0.5"
                     value={selectedGroup.y}
                     onChange={(e) => onUpdateGroupPosition(selectedGroup.id, selectedGroup.x, parseFloat(e.target.value))}
-                    className="w-full h-1 bg-white/[0.06] rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                    className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                   />
                 </div>
 
@@ -617,7 +617,7 @@ export default function TableMap({
                 <div>
                   <div className="flex justify-between text-[10px] text-slate-500 font-medium mb-1">
                     <span>Largura do Stand</span>
-                    <span className="font-bold text-slate-300">{selectedGroup.width}%</span>
+                    <span className="font-bold">{selectedGroup.width}%</span>
                   </div>
                   <input
                     type="range"
@@ -626,7 +626,7 @@ export default function TableMap({
                     step="0.1"
                     value={selectedGroup.width}
                     onChange={(e) => onUpdateGroupDetails(selectedGroup.id, { width: parseFloat(e.target.value) })}
-                    className="w-full h-1 bg-white/[0.06] rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                    className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                   />
                 </div>
 
@@ -634,7 +634,7 @@ export default function TableMap({
                 <div>
                   <div className="flex justify-between text-[10px] text-slate-500 font-medium mb-1">
                     <span>Comprimento do Stand</span>
-                    <span className="font-bold text-slate-300">{selectedGroup.height}%</span>
+                    <span className="font-bold">{selectedGroup.height}%</span>
                   </div>
                   <input
                     type="range"
@@ -643,7 +643,7 @@ export default function TableMap({
                     step="0.1"
                     value={selectedGroup.height}
                     onChange={(e) => onUpdateGroupDetails(selectedGroup.id, { height: parseFloat(e.target.value) })}
-                    className="w-full h-1 bg-white/[0.06] rounded-lg appearance-none cursor-pointer accent-indigo-500"
+                    className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                   />
                 </div>
 
@@ -655,7 +655,7 @@ export default function TableMap({
                       const nextRot = (selectedGroup.rotation + 90) % 360;
                       onUpdateGroupDetails(selectedGroup.id, { rotation: nextRot });
                     }}
-                    className="flex items-center gap-1 text-[10px] font-bold text-indigo-400 hover:text-indigo-300 bg-[#0e0f11] hover:bg-[#1a1b1e] border border-white/[0.04] px-2.5 py-1 rounded-md shadow-xs active:scale-95 transition-all"
+                    className="flex items-center gap-1 text-[10px] font-bold text-indigo-600 hover:text-indigo-800 bg-white border border-slate-200 px-2.5 py-1 rounded-md shadow-xs active:scale-95 transition-all"
                   >
                     <RotateCw className="h-3 w-3" /> {selectedGroup.rotation}°
                   </button>
@@ -664,17 +664,17 @@ export default function TableMap({
 
               {/* Color Themes */}
               <div>
-                <label className="text-[10px] font-bold text-slate-450 uppercase tracking-wider block mb-1.5">Paleta de Cor (Stand)</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1.5">Paleta de Cor (Stand)</label>
                 <div className="grid grid-cols-6 gap-2">
                   {(["blue", "teal", "indigo", "violet", "emerald", "amber"] as const).map((color) => {
                     const isActiveColor = selectedGroup.colorTheme === color;
                     const colorMap = {
-                      blue: "bg-blue-600 border-blue-500",
-                      teal: "bg-teal-600 border-teal-500",
-                      indigo: "bg-indigo-600 border-indigo-500",
-                      violet: "bg-violet-600 border-violet-500",
-                      emerald: "bg-emerald-600 border-emerald-500",
-                      amber: "bg-amber-600 border-amber-500",
+                      blue: "bg-blue-100 border-blue-300",
+                      teal: "bg-teal-100 border-teal-300",
+                      indigo: "bg-indigo-100 border-indigo-300",
+                      violet: "bg-violet-100 border-violet-300",
+                      emerald: "bg-emerald-100 border-emerald-300",
+                      amber: "bg-amber-100 border-amber-300",
                     };
                     
                     return (
@@ -696,17 +696,17 @@ export default function TableMap({
               <div className="flex gap-2 pt-2">
                 <button
                   onClick={() => onUpdateGroupDetails(selectedGroup.id, { isActive: false })}
-                  className="flex-1 flex items-center justify-center gap-1 py-1.5 bg-red-950/40 text-red-400 border border-red-900/40 rounded-lg text-xs font-bold hover:bg-red-900/30 active:scale-95 transition-all"
+                  className="flex-1 flex items-center justify-center gap-1 py-1.5 bg-red-50 text-red-600 border border-red-200 rounded-lg text-xs font-bold hover:bg-red-100 active:scale-95 transition-all"
                 >
                   <Trash2 className="h-3 w-3" /> Ocultar Stand
                 </button>
               </div>
             </div>
           ) : (
-            <div className="text-center py-8 text-slate-500 flex flex-col items-center justify-center gap-2">
-              <MapPin className="h-8 w-8 opacity-40 text-slate-600" />
-              <p className="text-xs font-semibold text-slate-400">Nenhum stand selecionado.</p>
-              <p className="text-[10px] text-slate-500">Clique em qualquer stand no mapa para editar suas propriedades.</p>
+            <div className="text-center py-8 text-slate-400 flex flex-col items-center justify-center gap-2">
+              <MapPin className="h-8 w-8 opacity-40 text-slate-300" />
+              <p className="text-xs font-semibold">Nenhum stand selecionado.</p>
+              <p className="text-[10px]">Clique em qualquer stand no mapa para editar suas propriedades.</p>
             </div>
           )}
         </div>

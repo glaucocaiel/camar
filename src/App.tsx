@@ -33,9 +33,7 @@ import {
   Globe,
   Smartphone,
   AlertTriangle,
-  Copy,
-  Lock,
-  Unlock
+  Copy
 } from "lucide-react";
 
 export default function App() {
@@ -483,7 +481,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-[#f1f5f9] font-sans antialiased p-4 sm:p-6 md:p-8 relative">
+    <div className="min-h-screen bg-slate-50/70 text-slate-900 font-sans antialiased p-4 sm:p-6 md:p-8">
       {/* GLOBAL TOAST BANNER */}
       <AnimatePresence>
         {successToast && (
@@ -491,7 +489,7 @@ export default function App() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
-            className="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-[#16171a] text-[#f1f5f9] text-xs font-bold py-3 px-6 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.5)] border border-white/[0.08] flex items-center gap-2"
+            className="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-slate-950 text-white text-xs font-bold py-3 px-6 rounded-full shadow-lg border border-slate-800 flex items-center gap-2"
           >
             <CheckCircle2 className="h-4 w-4 text-emerald-400" />
             <span>{successToast}</span>
@@ -501,61 +499,44 @@ export default function App() {
 
       <div className="max-w-7xl mx-auto space-y-6">
         {/* HEADER NAVBAR (BENTO STYLE) */}
-        <header className="bg-[linear-gradient(135deg,rgba(22,23,26,0.97),rgba(10,12,16,0.97))] backdrop-blur-2xl border border-white/[0.08] rounded-[1.5rem] p-5 shadow-[0_20px_60px_rgba(2,6,23,0.45)] ring-1 ring-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <header className="bg-white border border-slate-200 rounded-3xl p-5 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <ScientificLogo className="h-14 w-14 shrink-0" />
             <div>
-              <h1 className="font-display text-lg md:text-xl font-extrabold text-white tracking-tight flex items-center gap-1.5">
-                FIC CAMAR 2026 <span className="text-slate-400 font-light text-base">| Mapeamento</span>
+              <h1 className="font-sans text-lg md:text-xl font-bold text-slate-900 tracking-tight flex items-center gap-1.5">
+                FIC CAMAR 2026 <span className="text-slate-400 font-normal">| Mapeamento</span>
               </h1>
-              <p className="font-mono text-[9px] text-indigo-400 font-bold uppercase tracking-widest mt-0.5">
+              <p className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mt-0.5">
                 Feira de Iniciação Científica
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
-            {/* ADMIN MODE TOGGLE */}
-            <button
-              onClick={() => setIsAdminMode(!isAdminMode)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-bold transition-all duration-300 cursor-pointer border ${
-                isAdminMode 
-                  ? "bg-pink-500/[0.10] text-pink-300 border-pink-500/[0.18] shadow-[0_8px_24px_rgba(244,114,182,0.12)]" 
-                  : "bg-white/[0.04] text-slate-300 border-white/[0.08] hover:bg-white/[0.08] hover:text-white shadow-[0_8px_24px_rgba(255,255,255,0.03)]"
-              }`}
-              title="Alternar Modo Administrador (Arraste estandes no mapa para reposicioná-los)"
-            >
-              {isAdminMode ? <Unlock className="h-3.5 w-3.5 text-pink-400" /> : <Lock className="h-3.5 w-3.5 text-slate-500" />}
-              <span className="font-display font-semibold tracking-wide">
-                {isAdminMode ? "Modo Admin" : "Acesso Admin"}
-              </span>
-            </button>
-
-            {/* SHARE BUTTON */}
+          <div className="flex items-center gap-3">
             <button
               onClick={handleShare}
-              className="flex items-center gap-2 px-5 py-2.5 bg-[linear-gradient(135deg,rgba(99,102,241,0.18),rgba(59,130,246,0.16))] hover:bg-[linear-gradient(135deg,rgba(99,102,241,0.24),rgba(59,130,246,0.22))] text-indigo-200 border border-indigo-400/20 font-semibold text-xs sm:text-sm rounded-2xl active:scale-98 transition-all duration-350 cursor-pointer shadow-[0_10px_30px_rgba(59,130,246,0.14)]"
+              className="flex items-center gap-2 px-4.5 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:scale-95 transition-all text-white font-semibold text-xs sm:text-sm rounded-2xl shadow-xs cursor-pointer"
               title="Copiar link de compartilhamento público"
             >
-              <Share2 className="h-4 w-4 text-indigo-300" />
-              <span className="font-display font-medium tracking-wide">Compartilhar</span>
+              <Share2 className="h-4 w-4" />
+              <span>Compartilhar Mapa</span>
             </button>
           </div>
         </header>
 
         {/* SEARCH & TURMAS SELECTOR BENTO BOX */}
-        <div className="bg-[linear-gradient(135deg,rgba(17,19,24,0.96),rgba(12,14,18,0.96))] backdrop-blur-2xl border border-white/[0.08] rounded-[1.5rem] p-6 shadow-[0_20px_60px_rgba(2,6,23,0.34)] ring-1 ring-white/[0.04] flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-xs flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* SEARCH SYSTEM */}
           <div className="relative w-full lg:max-w-md">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-slate-500" />
+              <Search className="h-4 w-4 text-slate-400" />
             </div>
             <input
               type="text"
-              placeholder="Buscar projeto por título, aluno ou orientador..."
+              placeholder="Buscar projeto por título, aluno ou avaliador..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="block w-full pl-11 pr-4 py-3 bg-[#0e0f11]/90 border border-white/[0.04] rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500/40 focus:bg-[#0e0f11] transition-all leading-normal text-slate-100 placeholder-slate-500"
+              className="block w-full pl-11 pr-4 py-3 bg-slate-100 border-none rounded-2xl text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all leading-normal text-slate-800"
             />
             
             {/* Search Autocomplete Dropdown */}
@@ -565,27 +546,27 @@ export default function App() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute left-0 right-0 mt-2 bg-[#16171a] border border-white/[0.06] rounded-xl shadow-2xl z-50 overflow-hidden max-h-60 overflow-y-auto"
+                  className="absolute left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-lg z-50 overflow-hidden max-h-60 overflow-y-auto"
                 >
                   {filteredSearchResults.length > 0 ? (
                     filteredSearchResults.map((g) => (
                       <button
                         key={g.id}
                         onClick={() => handleSearchResultClick(g)}
-                        className="w-full text-left p-4 hover:bg-white/[0.02] border-b border-white/[0.04] transition-colors flex flex-col gap-1 text-xs"
+                        className="w-full text-left p-3.5 hover:bg-slate-50 border-b border-slate-100 transition-colors flex flex-col gap-1 text-xs"
                       >
-                        <div className="flex items-center justify-between gap-2">
-                          <span className="font-bold text-slate-200 bg-indigo-950/40 border border-indigo-900/40 px-2 py-0.5 rounded text-[9px] font-mono">
+                        <div className="flex items-center justify-between">
+                          <span className="font-bold text-slate-900 bg-indigo-50 px-1.5 py-0.5 rounded text-[10px]">
                             Stand {g.groupNumber} ({g.classCode})
                           </span>
                           <span className="text-[10px] text-slate-400 font-semibold">Orientador: {g.advisor}</span>
                         </div>
-                        <p className="font-semibold text-white line-clamp-1 mt-0.5">{g.title}</p>
+                        <p className="font-medium text-slate-700 line-clamp-1">{g.title}</p>
                         <p className="text-[10px] text-slate-400 line-clamp-1">Alunos: {g.participants.join(", ")}</p>
                       </button>
                     ))
                   ) : (
-                    <div className="p-4 text-center text-xs text-slate-400 italic">
+                    <div className="p-4 text-center text-xs text-slate-400">
                       Nenhum projeto encontrado para "{searchQuery}"
                     </div>
                   )}
@@ -596,17 +577,17 @@ export default function App() {
 
           {/* CLASS ROOM SELECTOR GRID */}
           <div className="flex items-center gap-3 overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0 scrollbar-none">
-            <span className="text-[9px] font-mono font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">Turma:</span>
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest whitespace-nowrap">Selecione a Turma:</span>
             <div className="flex gap-2">
               <button
                 onClick={() => {
                   setCurrentClass("TODAS");
                   setSelectedGroupId(null);
                 }}
-                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 cursor-pointer border ${
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap active:scale-95 ${
                   currentClass === "TODAS"
-                    ? "bg-indigo-500/10 text-indigo-300 border-indigo-500/30"
-                    : "bg-[#0e0f11] text-slate-400 border-white/[0.04] hover:bg-white/[0.02] hover:text-white"
+                    ? "bg-slate-950 text-white shadow-xs"
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
                 }`}
               >
                 Todas
@@ -626,10 +607,10 @@ export default function App() {
                       setCurrentClass(c.code);
                       setSelectedGroupId(null);
                     }}
-                    className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 whitespace-nowrap active:scale-95 cursor-pointer border ${
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap active:scale-95 ${
                       isSelected
-                        ? "bg-indigo-500/10 text-indigo-300 border-indigo-500/30"
-                        : "bg-[#0e0f11] text-slate-400 border-white/[0.04] hover:bg-white/[0.02] hover:text-white"
+                        ? "bg-indigo-600 text-white shadow-xs"
+                        : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
                     }`}
                   >
                     {c.name}
@@ -642,10 +623,10 @@ export default function App() {
 
         {/* ADMIN WORKSPACE BAR (ONLY VISIBLE IN ADMIN MODE) */}
         {isAdminMode && (
-          <div className="bg-[linear-gradient(135deg,rgba(20,22,28,0.98),rgba(10,12,16,0.98))] text-white rounded-[1.4rem] p-5 shadow-[0_20px_60px_rgba(2,6,23,0.32)] flex flex-col md:flex-row items-center justify-between gap-4 border border-white/[0.08] animate-in fade-in duration-300">
+          <div className="bg-slate-900 text-white rounded-3xl p-5 shadow-lg flex flex-col md:flex-row items-center justify-between gap-4 border border-slate-800 animate-in fade-in duration-300">
             <div>
               <div className="flex items-center gap-2">
-                <span className="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[9px] font-bold rounded uppercase tracking-wider">
+                <span className="px-2 py-0.5 bg-indigo-500 text-white text-[9px] font-bold rounded uppercase tracking-wider">
                   Admin Active
                 </span>
                 <h2 className="text-sm font-black tracking-tight">Painel de Controle do Layout</h2>
@@ -655,42 +636,42 @@ export default function App() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2 bg-[#0e0f11]/80 p-2 rounded-xl border border-white/[0.04]">
-              <span className="text-[9px] font-bold text-slate-450 uppercase tracking-wider pl-1">Ajustar Layout:</span>
+            <div className="flex flex-wrap items-center gap-2 bg-slate-800/60 p-2 rounded-2xl border border-slate-700/50">
+              <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider pl-1">Ajustar Layout:</span>
               <button
                 onClick={() => applyLayoutPreset("grid")}
-                className="flex items-center gap-1 bg-[#22242a] hover:bg-[#2c2e35] text-slate-200 border border-white/[0.04] text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Arrumar todos os stands em formato de grade regular"
               >
                 <Grid className="h-3.5 w-3.5 text-indigo-400" /> Grade
               </button>
               <button
                 onClick={() => applyLayoutPreset("circle")}
-                className="flex items-center gap-1 bg-[#22242a] hover:bg-[#2c2e35] text-slate-200 border border-white/[0.04] text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Dispor stands em arena circular"
               >
                 <Circle className="h-3.5 w-3.5 text-indigo-400" /> Arena
               </button>
               <button
                 onClick={() => applyLayoutPreset("rows")}
-                className="flex items-center gap-1 bg-[#22242a] hover:bg-[#2c2e35] text-slate-200 border border-white/[0.04] text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Dispor stands em duas fileiras paralelas"
               >
                 <Layers className="h-3.5 w-3.5 text-indigo-400" /> Fileiras
               </button>
               
-              <div className="h-4 w-[1px] bg-white/[0.05] mx-1" />
+              <div className="h-4 w-[1px] bg-slate-700 mx-1" />
 
               <button
                 onClick={handleExportConfig}
-                className="flex items-center gap-1 bg-[#22242a] hover:bg-indigo-950/40 hover:text-indigo-300 text-slate-200 border border-white/[0.04] text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-slate-800 hover:bg-indigo-900/50 hover:text-indigo-300 text-white border border-slate-700/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Salvar layout atual como JSON"
               >
                 <Download className="h-3.5 w-3.5" /> Exportar
               </button>
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="flex items-center gap-1 bg-[#22242a] hover:bg-indigo-950/40 hover:text-indigo-300 text-slate-200 border border-white/[0.04] text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-slate-800 hover:bg-indigo-900/50 hover:text-indigo-300 text-white border border-slate-700/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Carregar layout de arquivo JSON"
               >
                 <Upload className="h-3.5 w-3.5" /> Importar
@@ -705,7 +686,7 @@ export default function App() {
 
               <button
                 onClick={resetAllInteractions}
-                className="flex items-center gap-1 bg-amber-500/[0.05] hover:bg-amber-500/[0.1] text-amber-300 border border-amber-500/10 hover:border-amber-500/20 text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-amber-950/40 hover:bg-amber-900/40 text-amber-300 border border-amber-900/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Zerar estatísticas de curtidas e visitas"
               >
                 <Trash2 className="h-3.5 w-3.5" /> Zerar Estatísticas
@@ -713,7 +694,7 @@ export default function App() {
 
               <button
                 onClick={resetToInitialLayout}
-                className="flex items-center gap-1 bg-red-500/[0.05] hover:bg-red-500/[0.1] text-red-300 border border-red-500/10 hover:border-red-500/20 text-[10px] font-bold py-1.5 px-3 rounded-lg active:scale-95 transition-all cursor-pointer"
+                className="flex items-center gap-1 bg-red-950/40 hover:bg-red-900/40 text-red-300 border border-red-900/50 text-[10px] font-bold py-1.5 px-3 rounded-xl active:scale-95 transition-all"
                 title="Restaurar layout de fábrica"
               >
                 <RefreshCw className="h-3.5 w-3.5" /> Redefinir
@@ -726,7 +707,7 @@ export default function App() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
           {/* MAP CANVAS PANEL (LARGEST BENTO BLOCK) */}
-          <div className="lg:col-span-2 bg-[linear-gradient(135deg,rgba(17,19,24,0.96),rgba(12,14,18,0.96))] backdrop-blur-2xl border border-white/[0.08] rounded-[1.5rem] p-6 shadow-[0_24px_70px_rgba(2,6,23,0.34)] ring-1 ring-white/[0.04] flex flex-col justify-between">
+          <div className="lg:col-span-2 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
             <TableMap
               groups={groups}
               selectedGroupId={selectedGroupId}
@@ -742,119 +723,101 @@ export default function App() {
 
           {/* SIDEPANEL: MULTI-BLOCK BENTO TILES */}
           <div className="lg:col-span-1 flex flex-col h-full">
-            <div className="flex flex-col gap-4 h-full justify-between">
-              
+            <div className="flex flex-col gap-4 h-full">
               {/* BENTO TILE 1: ADMIN CONTROLS / STATS SUMMARY (HIGH CONTRAST DARK CARD) */}
-              <div className="bg-[linear-gradient(135deg,rgba(20,22,29,0.98),rgba(9,11,15,0.98))] rounded-[1.35rem] p-6 text-white shadow-[0_18px_55px_rgba(2,6,23,0.32)] flex flex-col justify-between relative overflow-hidden border border-white/[0.08] ring-1 ring-white/[0.04]">
-                <div className="absolute -right-3 -bottom-3 opacity-5 select-none pointer-events-none text-9xl font-black">
-                  📊
+              <div className="bg-slate-900 rounded-3xl p-6 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+                <div className="absolute top-0 right-0 opacity-10 font-black text-6xl select-none pointer-events-none pr-4 pt-2 text-slate-400">
+                  📈
                 </div>
                 <div>
-                  <div className="flex justify-between items-center mb-5">
-                    <h3 className="font-display font-bold text-xs uppercase tracking-widest text-slate-400 flex items-center gap-1.5">
-                      <TrendingUp className="h-3.5 w-3.5 text-indigo-400" /> Estatísticas Ativas
-                    </h3>
-                    <span className="text-[10px] font-mono text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">
-                      Live
-                    </span>
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="font-bold text-sm uppercase tracking-wider text-slate-200">Estatísticas Ativas</h3>
+                    <div className="w-7 h-7 rounded-full bg-slate-800 flex items-center justify-center text-xs">⚙️</div>
                   </div>
                   
-                  <div className="grid grid-cols-2 gap-3 mb-5">
-                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04] hover:border-white/[0.08] transition-colors duration-250">
-                      <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">Curtidas</p>
-                      <p className="font-display text-2xl font-black text-pink-300 mt-1 flex items-baseline gap-1">
-                        {classStats.totalClaps}
-                        <span className="text-xs text-pink-400">❤️</span>
-                      </p>
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="p-3.5 bg-slate-800/80 rounded-2xl border border-slate-700/50">
+                      <p className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Curtidas Gerais</p>
+                      <p className="text-xl font-extrabold text-indigo-400 mt-1">{classStats.totalClaps}</p>
                     </div>
-                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04] hover:border-white/[0.08] transition-colors duration-250">
-                      <p className="text-[9px] text-slate-500 font-bold uppercase tracking-wider">Presenças</p>
-                      <p className="font-display text-2xl font-black text-emerald-300 mt-1 flex items-baseline gap-1">
-                        {classStats.totalVisits}
-                        <span className="text-xs text-emerald-400">📍</span>
-                      </p>
+                    <div className="p-3.5 bg-slate-800/80 rounded-2xl border border-slate-700/50">
+                      <p className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Visitas</p>
+                      <p className="text-xl font-extrabold text-emerald-400 mt-1">{classStats.totalVisits}</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between text-xs border-t border-white/[0.04] pt-3.5 text-slate-400">
-                  <span className="font-medium">Mural de Apoio</span>
-                  <span className="font-mono text-[10px] font-bold text-slate-300 bg-white/[0.03] border border-white/[0.05] px-2.5 py-1 rounded-lg">
-                    {classStats.totalComments} publicadas
-                  </span>
+                <div className="flex items-center justify-between text-xs border-t border-slate-800 pt-3 text-slate-400">
+                  <span>Mural de Mensagens</span>
+                  <span className="font-bold text-white bg-slate-800 px-2 py-0.5 rounded-md">{classStats.totalComments} publicadas</span>
                 </div>
               </div>
 
-              {/* BENTO TILE 2: PARENT QUICK LOOK (DEEP EMERALD DESIGN BOX) */}
-              <div className="bg-[linear-gradient(135deg,rgba(5,20,15,0.98),rgba(4,11,8,0.98))] rounded-[1.35rem] p-6 text-white shadow-[0_18px_55px_rgba(3,11,8,0.32)] flex flex-col justify-between relative overflow-hidden min-h-[170px] border border-emerald-500/[0.12] ring-1 ring-emerald-500/[0.06]">
-                <div className="absolute right-3 bottom-1 text-8xl opacity-5 select-none pointer-events-none">🔬</div>
+              {/* BENTO TILE 2: PARENT QUICK LOOK (EMERALD GREEN DESIGN BOX) */}
+              <div className="bg-emerald-600 rounded-3xl p-6 text-white shadow-lg flex flex-col justify-between relative overflow-hidden min-h-[160px]">
+                <div className="absolute right-3 bottom-1 text-8xl opacity-15 select-none pointer-events-none">💚</div>
                 <div>
-                  <h4 className="font-mono text-[9px] font-bold uppercase tracking-widest text-emerald-400">Comunidade Escolar</h4>
-                  <p className="font-display text-xl font-light mt-1.5 leading-tight">
-                    Incentive a <span className="font-bold text-white underline decoration-emerald-500/40 decoration-2 underline-offset-4">Iniciação Científica</span>
+                  <p className="text-xl font-light mt-1.5">
+                    Incentive a <span className="font-bold text-white">Iniciação Científica</span>
                   </p>
                 </div>
-                <div className="mt-4 flex items-end justify-between gap-4">
-                  <p className="text-xs text-slate-400 leading-relaxed font-medium">
-                    Clique nos stands no mapa para registrar presença e parabenizar nossos jovens pesquisadores!
+                <div className="mt-4 flex items-end justify-between">
+                  <p className="text-[11px] text-emerald-100/90 leading-relaxed max-w-[200px]">
+                    Clique nos stands coloridos no mapa para parabenizar os alunos!
                   </p>
-                  <div className="bg-emerald-500/[0.06] p-3 rounded-xl border border-emerald-500/10 shrink-0 shadow-2xs text-center">
-                    <p className="text-[8px] font-bold tracking-widest uppercase text-emerald-450 font-mono">Destaque</p>
-                    <p className="font-display text-xs font-black text-emerald-300 mt-0.5">
-                      {classStats.topApplauded[0] ? `Stand ${classStats.topApplauded[0].mNum}` : "—"}
+                  <div className="bg-white/20 p-2.5 rounded-xl backdrop-blur-md text-center text-white border border-white/10 shrink-0">
+                    <p className="text-[8px] font-extrabold tracking-widest uppercase">Stand Destaque</p>
+                    <p className="text-xs font-bold mt-0.5">
+                      {classStats.topApplauded[0] ? `Stand ${classStats.topApplauded[0].mNum}` : "Nenhum"}
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* BENTO TILE 3: LEADERBOARD / DESTAQUES (DARK CARBON SLATE CARD) */}
-              <div className="bg-[linear-gradient(135deg,rgba(18,20,26,0.96),rgba(10,12,16,0.96))] border border-white/[0.08] rounded-[1.35rem] p-6 shadow-[0_18px_55px_rgba(2,6,23,0.3)] flex flex-col justify-between min-h-[220px] ring-1 ring-white/[0.04]">
+              {/* BENTO TILE 3: LEADERBOARD / DESTAQUES (CLEAN WHITE CARD) */}
+              <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-display text-xs font-bold text-slate-300 tracking-wider mb-4 flex items-center gap-2 uppercase">
-                    <Award className="h-4 w-4 text-indigo-400" />
-                    <span>{currentClass === "TODAS" ? "Destaques Gerais" : `Destaques • ${currentClass}`}</span>
+                  <h3 className="text-xs font-black text-slate-900 tracking-tight mb-3 flex items-center gap-1.5 uppercase">
+                    <TrendingUp className="h-4 w-4 text-indigo-500" /> {currentClass === "TODAS" ? "Destaques da turma" : `Destaques da Turma ${currentClass}`}
                   </h3>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-2.5">
                     {classStats.topApplauded.length > 0 ? (
                       classStats.topApplauded.map((item, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-3 p-3 rounded-xl border border-white/[0.04] bg-[#0e0f11]/60 hover:bg-[#0e0f11]/90 hover:border-white/[0.08] transition-all duration-200 text-xs group"
+                          className="flex items-center gap-3 p-2.5 rounded-xl border border-slate-100 hover:border-indigo-150 bg-slate-50/50 hover:bg-slate-50 transition-all text-xs"
                         >
-                          <div className="h-6 w-6 rounded-lg bg-white/[0.02] border border-white/[0.04] text-white flex items-center justify-center font-mono font-bold text-[10px] flex-shrink-0 shadow-2xs group-hover:bg-indigo-500/10 group-hover:text-indigo-300 group-hover:border-indigo-500/30 transition-all">
+                          <div className="h-6 w-6 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-100 flex items-center justify-center font-bold flex-shrink-0">
                             {idx + 1}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between gap-2 mb-0.5">
-                              <span className="font-bold text-white text-[11px] font-mono">Stand {item.mNum}</span>
-                              <span className="text-[10px] font-bold text-slate-300 flex items-center gap-1 shrink-0">
-                                <Heart className="h-3 w-3 fill-pink-400 text-pink-400" /> {item.count}
+                            <div className="flex items-center justify-between mb-0.5">
+                              <span className="font-bold text-slate-800 text-[11px]">Stand {item.mNum}</span>
+                              <span className="text-[9px] font-bold text-indigo-600 flex items-center gap-0.5">
+                                <Heart className="h-2.5 w-2.5 fill-indigo-500 text-indigo-500" /> {item.count} curtidas
                               </span>
                             </div>
-                            <p className="text-slate-400 font-medium line-clamp-1 text-[10px] tracking-tight">
+                            <p className="text-slate-500 line-clamp-1 font-semibold uppercase text-[10px] tracking-tight">
                               {item.title}
                             </p>
                           </div>
                         </div>
                       ))
                     ) : (
-                      <div className="text-center py-8 text-slate-500 italic text-xs border border-dashed border-white/[0.06] rounded-xl bg-white/[0.01]">
-                        Nenhuma curtida enviada ainda. Seja o primeiro a apoiar os projetos!
-                      </div>
+                      <p className="text-xs text-slate-400 italic">Dê as primeiras curtidas para criar o ranking!</p>
                     )}
                   </div>
                 </div>
 
-                <div className="border-t border-white/[0.04] pt-4 mt-5">
-                  <div className="flex gap-3 text-[9px] text-slate-500 font-mono font-bold uppercase tracking-wider">
-                    <span className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-indigo-500/40" /> Estandes</span>
-                    <span className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500/40" /> Presença</span>
-                    <span className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-pink-400/55" /> Curtidas</span>
+                <div className="border-t border-slate-100 pt-4 mt-4">
+                  <div className="flex gap-2 text-[10px] text-slate-400">
+                    <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-indigo-500" /> Ativos</span>
+                    <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-emerald-500" /> Presença</span>
+                    <span className="flex items-center gap-1"><div className="w-2 h-2 rounded-full bg-amber-500" /> Apoio</span>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -864,7 +827,7 @@ export default function App() {
       {/* MODAL FOR SELECTED PROJECT DETAILS */}
       <AnimatePresence>
         {selectedGroup && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/75 backdrop-blur-xl animate-in fade-in duration-300">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-300">
             {/* Backdrop click to close */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -876,11 +839,11 @@ export default function App() {
             
             {/* Modal Content Container */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.98, y: 15 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.98, y: 15 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="relative z-10 w-full max-w-2xl bg-[linear-gradient(135deg,rgba(20,22,29,0.98),rgba(9,11,15,0.98))] rounded-[1.4rem] shadow-[0_24px_80px_rgba(2,6,23,0.42)] overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[90vh] border border-white/[0.08] ring-1 ring-white/[0.04]"
+              className="relative z-10 w-full max-w-2xl bg-white/75 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[96vh] sm:max-h-[90vh] border border-white/50"
             >
               <ProjectDetails
                 group={selectedGroup}
@@ -899,7 +862,7 @@ export default function App() {
       {/* MODAL FOR SHARING MAP */}
       <AnimatePresence>
         {isShareModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-300">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-300">
             {/* Backdrop click to close */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -911,24 +874,24 @@ export default function App() {
             
             {/* Modal Content Container */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.98, y: 15 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.98, y: 15 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 350 }}
-              className="relative z-10 w-full max-w-md bg-[#16171a] rounded-xl shadow-2xl overflow-hidden flex flex-col border border-white/[0.05]"
+              className="relative z-10 w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-200"
             >
               {/* Header */}
-              <div className="bg-[#101114] text-white p-5 relative overflow-hidden flex items-center justify-between border-b border-white/[0.05]">
+              <div className="bg-slate-900 text-white p-5 relative overflow-hidden flex items-center justify-between border-b border-slate-800">
                 <div className="flex items-center gap-2.5 z-10">
                   <Share2 className="h-5 w-5 text-indigo-400" />
                   <div>
                     <h3 className="font-sans font-bold text-sm text-white">Compartilhar Mapa</h3>
-                    <p className="text-[10px] text-slate-400 font-medium">Link público para celulares e computadores</p>
+                    <p className="text-[10px] text-slate-300 font-medium">Link público para celulares e computadores</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsShareModalOpen(false)}
-                  className="z-10 p-1.5 rounded-full hover:bg-white/5 text-slate-400 hover:text-white transition-all cursor-pointer"
+                  className="z-10 p-1.5 rounded-full hover:bg-white/10 text-slate-300 hover:text-white transition-all cursor-pointer"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -938,9 +901,9 @@ export default function App() {
               <div className="p-6 space-y-5 overflow-y-auto max-h-[80vh]">
                 {/* Link Box */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-slate-450 uppercase tracking-wider block">Link do Aplicativo:</label>
-                  <div className="flex items-center gap-2 p-3 bg-[#0e0f11] border border-white/[0.04] rounded-xl">
-                    <span className="text-xs text-slate-300 font-mono select-all truncate flex-1 leading-normal">
+                  <label className="text-xs font-bold text-slate-600 uppercase tracking-wider block">Link do Aplicativo:</label>
+                  <div className="flex items-center gap-2 p-3 bg-slate-50 border border-slate-200 rounded-2xl">
+                    <span className="text-xs text-slate-750 font-mono select-all truncate flex-1 leading-normal">
                       {window.location.origin}
                     </span>
                     <button
@@ -949,7 +912,7 @@ export default function App() {
                         setSuccessToast("Copiado!");
                         setTimeout(() => setSuccessToast(null), 2500);
                       }}
-                      className="px-3.5 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 font-bold text-xs rounded-lg flex items-center gap-1.5 shrink-0 cursor-pointer border border-indigo-500/15"
+                      className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 active:scale-95 transition-all text-white font-bold text-xs rounded-xl flex items-center gap-1.5 shrink-0 cursor-pointer"
                     >
                       <Copy className="h-3.5 w-3.5" />
                       <span>Copiar</span>
@@ -958,38 +921,38 @@ export default function App() {
                 </div>
 
                 {/* Compatibility Notice / Safari Sandbox Explanation */}
-                <div className="p-4 bg-amber-500/[0.02] rounded-xl border border-amber-500/10 space-y-2.5">
-                  <div className="flex items-center gap-2 text-amber-300 font-bold text-xs uppercase tracking-wider">
-                    <AlertTriangle className="h-4 w-4 shrink-0 text-amber-400" />
+                <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200/50 space-y-2.5">
+                  <div className="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase tracking-wider">
+                    <AlertTriangle className="h-4 w-4 shrink-0 text-amber-600" />
                     <span>⚠️ Aviso sobre Cookie / Login</span>
                   </div>
-                  <p className="text-xs text-slate-300 leading-relaxed font-semibold">
+                  <p className="text-xs text-amber-900 leading-relaxed font-semibold">
                     O link atual é uma prévia de desenvolvimento do Google AI Studio. 
                   </p>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-amber-850 leading-relaxed">
                     Por segurança, navegadores móveis (especialmente <strong>Safari / iPhone / iOS</strong>) podem exibir a tela cinza de <span className="underline italic">"Action required to load your app"</span>.
                   </p>
-                  <p className="text-[11px] text-amber-400 leading-relaxed font-medium">
+                  <p className="text-[11px] text-amber-800 leading-relaxed font-medium">
                     👉 Se isso ocorrer com você ou com um visitante, basta clicar no botão <strong>"Authenticate in new window"</strong> (Autenticar) para autorizar e abrir o mapa instantaneamente.
                   </p>
                 </div>
 
                 {/* How to deploy truly 100% public without login */}
-                <div className="p-4 bg-indigo-500/[0.02] rounded-xl border border-indigo-500/10 space-y-2.5">
-                  <div className="flex items-center gap-2 text-indigo-300 font-bold text-xs uppercase tracking-wider">
-                    <Globe className="h-4 w-4 shrink-0 text-indigo-400" />
+                <div className="p-4 bg-indigo-50 rounded-2xl border border-indigo-100/50 space-y-2.5">
+                  <div className="flex items-center gap-2 text-indigo-900 font-bold text-xs uppercase tracking-wider">
+                    <Globe className="h-4 w-4 shrink-0 text-indigo-600" />
                     <span>🚀 Como ter um link 100% livre (Sem Login)</span>
                   </div>
-                  <p className="text-xs text-slate-300 leading-relaxed">
+                  <p className="text-xs text-indigo-950 leading-relaxed">
                     Para que <strong>todos os pais e visitantes</strong> acessem diretamente pelo celular <strong>sem qualquer tela de login ou autenticação</strong>, publique o site definitivamente na nuvem!
                   </p>
-                  <div className="bg-[#0e0f11] border border-white/[0.04] p-3 rounded-xl space-y-1 text-[11px] text-indigo-200 font-medium">
+                  <div className="bg-white/80 border border-indigo-150 p-3 rounded-xl space-y-1 text-[11px] text-indigo-900 font-medium">
                     <p className="flex items-start gap-1.5">
-                      <span className="text-indigo-400 font-extrabold shrink-0">1.</span>
+                      <span className="text-indigo-600 font-extrabold shrink-0">1.</span>
                       <span>No canto superior direito da sua tela no <strong>Google AI Studio</strong>, clique no botão azul <strong>"Deploy"</strong> ou <strong>"Deploy to Cloud Run"</strong>.</span>
                     </p>
                     <p className="flex items-start gap-1.5 mt-1.5">
-                      <span className="text-indigo-400 font-extrabold shrink-0">2.</span>
+                      <span className="text-indigo-600 font-extrabold shrink-0">2.</span>
                       <span>O Google Cloud criará um endereço web totalmente independente (ex: <code>https://meu-mapa-xxx.run.app</code>) que carrega instantaneamente em qualquer Android, iOS ou Windows de forma 100% pública!</span>
                     </p>
                   </div>
@@ -998,7 +961,7 @@ export default function App() {
                 {/* Confirm Button */}
                 <button
                   onClick={() => setIsShareModalOpen(false)}
-                  className="w-full py-2.5 bg-white/[0.03] hover:bg-white/[0.06] text-white font-semibold text-xs rounded-lg transition-all active:scale-99 border border-white/[0.05] cursor-pointer"
+                  className="w-full py-3 bg-slate-900 hover:bg-slate-850 text-white font-bold text-xs rounded-2xl transition-all active:scale-99 cursor-pointer"
                 >
                   Entendi
                 </button>
@@ -1009,9 +972,9 @@ export default function App() {
       </AnimatePresence>
 
       {/* FOOTER */}
-      <footer className="max-w-7xl mx-auto mt-12 py-8 text-center text-xs text-slate-500 font-medium border-t border-white/[0.04]">
+      <footer className="max-w-7xl mx-auto mt-12 py-8 text-center text-xs text-slate-400 font-medium border-t border-slate-200">
         <p>© 2026 Mostra Científica Colegial. Todos os direitos reservados.</p>
-        <p className="mt-1 opacity-60">Plataforma desenvolvida para mapeamento e interação em tempo real de feiras científicas.</p>
+        <p className="mt-1 opacity-75">Plataforma desenvolvida para mapeamento e interação em tempo real de feiras científicas.</p>
       </footer>
     </div>
   );
