@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Mostra Científica - Layout de Mesas e Interações",
+  "description": "Plataforma interativa para pais visualizarem os projetos da mostra científica, interagirem com as mesas (curtidas, comentários) e painel administrativo para ajuste de layout das turmas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
